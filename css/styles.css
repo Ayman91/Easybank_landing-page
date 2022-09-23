@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+/** Base styles **/
+:root {
+	/* primary colors */
+	--dark-blue: hsl(233, 26%, 24%);
+	--lime-green: hsl(136, 65%, 51%);
+	--bright-cyan: hsl(192, 70%, 51%);
+
+	/* neutral colors */
+	--white: hsl(0, 0%, 100%);
+	/* --grayish-blue: hsl(233, 8%, 62%); */
+	/* --grayish-blue: hsl(234, 8%, 49%); */
+	--grayish-blue: hsl(232, 9%, 47%);
+	--attribution: hsl(228, 45%, 44%);
+	/* --very-light-gray: hsl(0, 0%, 98%); */
+	--very-light-gray: hsl(220, 14%, 96%);
+	--light-grayish-blue: hsl(220, 16%, 96%);
+
+	/* typography */
+	--font-family: "Public Sans", sans-serif;
+	--font-light: 300;
+	--font-medium: 400;
+	--font-bold: 700;
+
+	/* buttons */
+	--primary-btn: linear-gradient(135deg, var(--lime-green), var(--bright-cyan));
+}
+
+/** utilities **/
+html {
+	scroll-behavior: smooth;
+}
+
+/** font-weight for Header, Sub-Heading **/
+:is(h1, h2, h3) {
+	font-weight: var(--font-medium);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: var(--font-family);
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: var(--white);
+	text-decoration: none;
+	display: inline-block;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	height: inherit;
+}
+
+.btn {
+	border: none;
+	background-color: #0000;
+}
+
+.primary {
+	width: 150px;
+	padding: 15px 0;
+	border-radius: 25px;
+	color: var(--white);
+	background: var(--primary-btn);
+}
+
+.btn.primary {
+	cursor: pointer;
+}
+
+.btn.primary:hover {
+	background: linear-gradient();
+}
+
+img {
+	width: inherit;
+	display: block;
+}
+
+p {
+	color: var(--grayish-blue);
+}
+
+/**__________HEADER__________**/
+.header {
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	position: fixed;
+	background-color: var(--white);
+}
+
+.header__nav {
+	display: flex;
+	height: inherit;
+	align-items: center;
+}
+
+/**__________HEROBOX__________**/
+
+.herobox .container {
+	display: grid;
+}
+
+.herobox--content {
+	height: 275px;
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.herobox__header {
+	font-size: 2.5rem;
+	width: fit-content;
+	color: var(--dark-blue);
+}
+
+/**__________SERVICES__________**/
+.services {
+	background-color: var(--light-grayish-blue);
+}
+
+.services--intro {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.services__header {
+	font-size: 2rem;
+}
+
+.services__text {
+	color: #4f515f;
+	line-height: 1.45;
+}
+
+.service--grid {
+	display: grid;
+}
+
+/**__________BLOG__________**/
+
+.blog {
+	background-color: var(--very-light-gray);
+}
+
+.section__article:nth-child(1) .article__img {
+	background: url(/images/image-currency.jpg);
+}
+
+.section__article:nth-child(2) .article__img {
+	background: url(/images/image-restaurant.jpg);
+}
+
+.section__article:nth-child(3) .article__img {
+	background: url(/images/image-plane.jpg);
+}
+
+.section__article:nth-child(4) .article__img {
+	background: url(/images/image-confetti.jpg);
+}
+
+:is(.section__article:nth-child(1) .article__img, .section__article:nth-child(2)
+		.article__img, .section__article:nth-child(3)
+		.article__img, .section__article:nth-child(4) .article__img) {
+	height: 200px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.section__grid {
+	display: grid;
+}
+
+.article--content {
+	background-color: var(--white);
+}
+
+.article__author {
+	display: inline;
+	color: var(--grayish-blue);
+}
+
+.article__header {
+	margin: 10px 0;
+	cursor: pointer;
+	color: var(--dark-blue);
+	transition: 0.3s ease-in-out;
+}
+
+/**__________FOOTER__________**/
+
+.footer {
+	padding: 40px 0;
+	background-color: var(--dark-blue);
+}
+
+:is(.footer .container, .footer--social-media, .footer--cta) {
+	display: flex;
+	align-items: center;
+}
+
+:is(.footer .container, .footer--cta) {
+	justify-content: space-between;
+}
+
+.footer--cta {
+	height: 75px;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer--copyright {
+	color: #bfc0cb;
+}
+
+.social-media--item:hover svg path {
+	cursor: pointer;
+	fill: var(--lime-green);
+	transition: 0.3s ease-in-out;
+}

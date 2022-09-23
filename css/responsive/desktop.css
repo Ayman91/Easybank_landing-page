@@ -1,0 +1,249 @@
+@media screen and (min-width: 1440px) {
+	/**__________GENERAL DESKTOP STYLES__________**/
+
+	:is(.nav--link:hover, .article__header:hover) {
+		color: var(--lime-green);
+		transition: 0.3s ease-in-out;
+	}
+
+	/**__________HEADER__________**/
+
+	:is(.menu--icon, .close--icon) {
+		display: none;
+	}
+
+	.header {
+		height: 60px !important;
+	}
+
+	.header__nav {
+		justify-content: space-around;
+	}
+
+	.nav--items {
+		width: 400px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav--item {
+		border-width: 4px;
+		border-bottom: solid;
+		transition: 0.3s ease-in-out;
+		border-image: linear-gradient(to right, transparent, transparent) 1;
+	}
+
+	.nav--item:hover {
+		border-width: 4px;
+		border-bottom: solid;
+		color: var(--dark-blue);
+		transition: 0.3s ease-in-out;
+		border-image: linear-gradient(135deg, var(--lime-green), var(--bright-cyan))
+			1;
+	}
+
+	.nav--items .nav--link {
+		padding: 19px 0px;
+		color: var(--grayish-blue);
+	}
+
+	/**__________HEROBOX__________**/
+
+	.herobox {
+		height: 670px;
+		overflow-x: clip;
+	}
+
+	.herobox .container {
+		align-items: center;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.herobox--content {
+		order: 1;
+		animation: fadeInUp 0.5s linear;
+	}
+
+	.herobox--background {
+		order: 2;
+		height: inherit;
+	}
+
+	.img--desktop {
+		width: 112%;
+		transform: scale(1.5, 1.53);
+	}
+
+	.img--phone {
+		display: none;
+	}
+
+	.img--mockups {
+		z-index: 1;
+		width: 100%;
+		position: inherit;
+		transform: translate(150px, -580px);
+	}
+
+	.herobox__text {
+		line-height: 1.5;
+		max-width: 480px;
+		font-size: 1.21rem;
+	}
+
+	/**__________SERVICES__________**/
+	.services {
+		padding: 5rem 0;
+	}
+
+	.services--intro {
+		height: 110px;
+		align-items: flex-start;
+	}
+
+	.services__text {
+		max-width: 640px;
+		font-size: 1.125rem;
+	}
+
+	.service--grid {
+		column-gap: 25px;
+		margin-top: 3rem;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.service__section {
+		height: 250px;
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	:is(.service__section:nth-child(1), .service__section:nth-child(2), .service__section:nth-child(3), .service__section:nth-child(4)) {
+		animation: fadeInUp 0.5s linear;
+	}
+
+	.service__section:nth-child(2) {
+		animation-delay: 0.1s;
+	}
+
+	.service__section:nth-child(3) {
+		animation-delay: 0.2s;
+	}
+
+	.service__section:nth-child(4) {
+		animation-delay: 0.3s;
+	}
+
+	.section__text {
+		line-height: 1.35;
+		font-size: 1.169rem;
+	}
+
+	/**__________BLOG__________**/
+	.blog {
+		padding: 5rem 0;
+	}
+
+	.blog__header {
+		display: inline;
+	}
+
+	.section__grid {
+		margin-top: 3rem;
+		column-gap: 25px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	:is(.section__article:nth-child(1), .section__article:nth-child(2), .section__article:nth-child(3), .section__article:nth-child(4)) {
+		animation: fadeInUp 0.5s linear;
+	}
+
+	.section__article:nth-child(1) {
+		animation-delay: 0.2s;
+	}
+
+	.section__article:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.section__article:nth-child(3) {
+		animation-delay: 0.3s;
+	}
+
+	.section__article:nth-child(4) {
+		animation-delay: 0.4s;
+	}
+
+	.article--content {
+		padding: 20px;
+	}
+
+	.article__header {
+		font-size: 1.25rem;
+	}
+
+	.article__text {
+		line-height: 1.5;
+		font-size: 0.776rem;
+	}
+}
+
+/**__________FOOTER__________**/
+.footer {
+	height: 150px;
+}
+
+.footer .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer--info-group {
+	display: flex;
+	height: inherit;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.footer__nav {
+	width: 600px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer--social-media {
+	width: 200px;
+	justify-content: space-between;
+}
+
+.footer__nav--links {
+	display: grid;
+	gap: 20px 50px;
+	color: var(--white);
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.footer--cta {
+	flex-direction: column;
+	align-items: end !important;
+}
+
+/**__________ANIMATIONS__________**/
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 40px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
